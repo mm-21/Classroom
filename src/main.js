@@ -9,7 +9,7 @@ function createWindow() {
 		width: 1430,
 		height: 800,
 		resizable: false,
-		title: 'Classroom'
+		title: 'RVClassroom'
 	});
 	const startUrl = process.env.DEV_URL ||
 		url.format({

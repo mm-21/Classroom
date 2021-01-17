@@ -4,6 +4,7 @@ import { storage } from '../firebase/firebase';
 import '../styles/File.css';
 
 const { shell } = window.require('electron');
+//const { shell } = require('electron');
 
 class File extends React.Component {
 

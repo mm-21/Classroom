@@ -74,7 +74,8 @@ class LectureNotes extends React.Component {
 		storage.ref('references/' + this.props.subjectCode + '_' + this.props.subjectName + '/' + file.name).put(file).on('state_changed',
 			(fileSnapshot) => {
 				let percentage = (fileSnapshot.bytesTransferred / fileSnapshot.totalBytes) * 100;
-				path = fileSnapshot.ref.location.path;
+				//path = fileSnapshot.ref.location.path;
+				path = fileSnapshot.ref.toString();
 				this.setState({ percentage });
 			},
 			(error) => {

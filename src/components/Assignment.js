@@ -164,7 +164,8 @@ class Assignment extends React.Component {
 		storage.ref('assignment_files/' + subjectCode + '_' + subjectName + '/assignment_' + assignmentNumber + '/student_submissions/' + studentID + '/' + file.name).put(file).on('state_changed',
 			(fileSnapshot) => {
 				let percentage = (fileSnapshot.bytesTransferred / fileSnapshot.totalBytes) * 100;
-				path = fileSnapshot.ref.location.path;
+				//path = fileSnapshot.ref.location.path;
+				path = fileSnapshot.ref.toString();
 				this.setState({ percentage });
 			},
 			(error) => {
